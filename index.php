@@ -336,7 +336,7 @@ if (file_exists($db_config_path)) {
     }
 }
 
-if (!$db_connected) {
+if (!$db_connected || empty($db['default']['database'])) {
     redirectToInstaller();
 }
 
